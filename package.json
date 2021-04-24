@@ -13,7 +13,8 @@
         "vscode": "^1.14.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Formatters"
     ],
     "contributes": {
         "languages": [{
@@ -27,5 +28,16 @@
             "scopeName": "source.asn1",
             "path": "./syntaxes/asn1.tmLanguage.json"
         }]
-    }
+    },
+    "keywords": [
+        "ASN",
+        "ASN.1",
+        "DER",
+        "BER",
+        "PER",
+        "UPER",
+        "XER",
+        "X.680",
+        "ISO/IEC 8824-1"
+    ],
 }
