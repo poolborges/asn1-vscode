@@ -1,0 +1,11 @@
+= ASN.1 VSCode Extension
+
+Visual Studio Code Extension for ASN.1 Syntax highlighting
+
+== Developer How to 
+
+----
+npm install -g vsce
+vsce package
+----
+

@@ -1,0 +1,31 @@
+{
+    "name": "asn1-vscode",
+    "displayName": "asn1-vscode",
+    "description": "ASN.1 syntax highlighting",
+    "version": "0.0.1",
+    "publisher": "poolborges",
+    "icon": "image/asn1-vscode_128px.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/poolborges/asn1-vscode.git"
+    },
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "asn1",
+            "aliases": ["ASN.1", "asn1", "Abstract Syntax Notation No. 1"],
+            "extensions": [".asn", ".asn1"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "asn1",
+            "scopeName": "source.asn1",
+            "path": "./syntaxes/asn1.tmLanguage.json"
+        }]
+    }
+}

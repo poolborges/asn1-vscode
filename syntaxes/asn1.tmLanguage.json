@@ -1,0 +1,82 @@
+
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "ASN.1",
+    "patterns": [{
+            "include": "#asn1.keywords"
+        },
+        {
+            "include": "#asn1.comments"
+        },
+        {
+            "include": "#asn1.type"
+        }
+    ],
+    "repository": {
+        "asn1.keywords": {
+            "patterns": [{
+                    "name": "keyword.control.asn1",
+                    "match": "\\b(BEGIN|END)\\b"
+                },
+                {
+                    "name": "keyword.other.asn1",
+                    "match": "\\b(IMPORTS,FROM)\\b"
+                },
+				{
+					 "name": "keyword.modifier.asn1",
+					 "match": "\\b(IMPORTS|FROM|DEFINITIONS|AUTOMATIC|EXPLICIT|IMPLICIT|TAGS)\\b"
+				 }
+            ]
+		},
+		
+        "asn1.comments": {
+            "patterns": [{
+                "name": "comment.line.double-dash.asn1",
+                "match": "(--).*$\n?"
+            }]
+        },
+        
+        "asn1.type": {
+            "patterns": [
+                {
+                    "name": "meta.brace.curly.asn1",
+                    "match": "\\{|\\}"
+                },
+                {
+                    "name": "meta.brace.round.asn1",
+                    "match": "\\(|\\)"
+                },
+                {
+                    "name": "storage.modifier.asn1",
+                    "match": "\\b(OPTIONAL|SIZE)\\b"
+                },
+                {
+                    "name": "storage.type.asn1",
+                    "match": "\\b(BOOLEAN|BIT STRING|CHOICE|INTEGER|OCTET STRING|NULL|OBJECT IDENTIFIER|REAL|ENUMERATED|CHARACTER STRING|IA5String|UniversalString)\\b"
+                },
+                {
+                    "name": "storage.type.structured.asn1",
+                    "match": "\\b(SEQUENCE|SEQUENCE OF|SET|SET OFF|OF)\\b"
+                },
+                {
+                    "name": "constant.numeric.asn1",
+                    "match": "\\b(\\s+(0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b",
+                    "comment ": "Numbers"
+                },
+                {
+                    "name": "entity.name.type.asn1",
+                    "match": "\\b(([A-Z]+\\w+)(?=\\s*::=))\\b",
+                    "comment": "12.2 Type references <Token> := <Type>"
+                },
+                {
+                    "name": "entity.other.attribute-name.asn1",
+                    "match": "\\b(([a-z]+\\w+)(?=\\s*))\\b",
+                    "comment": "12.3 Identifiers <token> <TYPE>"
+                }
+            ]
+        }
+       
+    },
+    "scopeName": "source.asn1"
+}
+
